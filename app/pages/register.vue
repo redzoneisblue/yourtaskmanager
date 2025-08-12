@@ -12,9 +12,7 @@ const signUp = async () => {
         const { data, error } = await client.auth.signUp({
             email: email.value,
             password: password.value,
-            : {      
-
-: 'https://yourtaskmanagerr.netlify.app/login',    }
+            options : {emailRedirectTo: 'https://yourtaskmanagerr.netlify.app/login'}
         });
         if(error) throw error;
         else {
